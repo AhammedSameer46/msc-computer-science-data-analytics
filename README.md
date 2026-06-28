@@ -23,6 +23,7 @@ This repository is a collection of everything I learn during my M.Sc. program. M
 * Practice Programs
 * Mini Projects
 * Notes and Experiments
+* Mathamatics
 
 As my coursework progresses, this repository will continue to grow with new topics, projects, and learning resources.
 
