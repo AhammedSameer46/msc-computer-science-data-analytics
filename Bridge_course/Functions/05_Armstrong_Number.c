@@ -1,28 +1,3 @@
-/*
- * Program: Check Armstrong Number using a User-Defined Function
- *
- * ALGORITHM:
- * 1. Define isArmstrong(int n) that returns 1 or 0.
- * 2. Inside the function:
- *      - Count the number of digits in n.
- *      - For each digit, raise it to the power of (number of
- *        digits) and add it to a sum.
- *      - Compare sum with the original number.
- * 3. In main(), call the function and print the result.
- *
- * EXPLANATION:
- * An Armstrong number is a number that equals the sum of its own
- * digits each raised to the power of the number of digits.
- * Example: 153 = 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
- *
- * SAMPLE INPUT / OUTPUT:
- * Input : 153
- * Output: 153 is an Armstrong number
- *
- * Input : 123
- * Output: 123 is NOT an Armstrong number
- */
-
 #include <stdio.h>
 #include <math.h>   // for pow()
 

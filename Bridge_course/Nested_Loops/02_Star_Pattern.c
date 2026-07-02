@@ -1,26 +1,3 @@
-/*
- * Program: Print a Right-Angled Triangle Star Pattern
- *
- * ALGORITHM:
- * 1. Take number of rows N as input.
- * 2. Outer loop runs from i = 1 to N (controls the row).
- * 3. Inner loop runs from j = 1 to i, printing a '*' each time.
- * 4. Print a newline after each row.
- *
- * EXPLANATION:
- * Similar to the number pyramid, but instead of printing numbers,
- * we print the '*' character. Row i contains exactly i stars.
- *
- * SAMPLE INPUT / OUTPUT:
- * Input : 5
- * Output:
- * *
- * * *
- * * * *
- * * * * *
- * * * * * *
- */
-
 #include <stdio.h>
 
 int main() {

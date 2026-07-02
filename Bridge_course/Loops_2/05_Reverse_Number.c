@@ -1,26 +1,3 @@
-/*
- * Program: Reverse the digits of a Number (using while loop)
- *
- * ALGORITHM:
- * 1. Take a number N as input.
- * 2. Initialize reversed = 0.
- * 3. While N != 0:
- *      digit = N % 10          (get last digit)
- *      reversed = reversed*10 + digit   (append it to result)
- *      N = N / 10              (remove last digit)
- * 4. Print reversed.
- *
- * EXPLANATION:
- * The modulus operator (%) extracts the last digit of a number.
- * Integer division (/) removes that last digit. By repeatedly
- * peeling off digits from the end and appending them to a new
- * number, we build the number in reverse order.
- *
- * SAMPLE INPUT / OUTPUT:
- * Input : 1234
- * Output: Reversed number = 4321
- */
-
 #include <stdio.h>
 
 int main() {

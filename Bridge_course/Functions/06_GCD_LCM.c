@@ -1,30 +1,3 @@
-/*
- * Program: Find GCD and LCM of Two Numbers using Functions
- *
- * ALGORITHM:
- * 1. Define gcd(int a, int b) using the Euclidean algorithm:
- *      while b != 0: (a, b) = (b, a % b)
- *      return a
- * 2. Define lcm(int a, int b) using the relationship:
- *      LCM(a,b) = (a * b) / GCD(a,b)
- * 3. In main(), take two numbers, call both functions, and
- *    print the results.
- *
- * EXPLANATION:
- * The Euclidean algorithm is an efficient way to find the
- * Greatest Common Divisor by repeatedly replacing the larger
- * number with the remainder of dividing it by the smaller number,
- * until the remainder becomes 0. Once we know the GCD, the LCM
- * can be calculated directly using the formula above, since
- * GCD(a,b) * LCM(a,b) = a * b.
- *
- * SAMPLE INPUT / OUTPUT:
- * Input : a = 12, b = 18
- * Output:
- * GCD of 12 and 18 = 6
- * LCM of 12 and 18 = 36
- */
-
 #include <stdio.h>
 
 // Function prototypes
