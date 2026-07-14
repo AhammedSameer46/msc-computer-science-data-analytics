@@ -1,4 +1,4 @@
-#include<stdio.h>
+'''#include<stdio.h>
 int main()
 {
 	int n,number,count=0;
@@ -13,5 +13,5 @@ int main()
 		
 	}
 	printf("the number %d had %d",number,count);
-}
+}'''
 
