@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TravelMate AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">✈</span>
+      <span class="brand-name">TravelMate<span class="brand-ai">AI</span></span>
+    </div>
+    <div class="route-strip">
+      <span>DEL</span><span class="dot">·</span><span>BOM</span><span class="dot">·</span><span>BLR</span><span class="dot">·</span><span>GOI</span>
+    </div>
+  </div>
+  <div class="perforation"></div>
+</header>
+
+<main class="chat-wrap">
+  <div id="chat" class="chat" aria-live="polite">
+    <div class="msg msg-bot">
+      <div class="bubble">
+        Boarding now. Ask me about weather, flights, hotels, or attractions in
+        <strong>Delhi</strong>, <strong>Mumbai</strong>, <strong>Bangalore</strong>, or <strong>Goa</strong>.
+      </div>
+    </div>
+  </div>
+</main>
+
+<form id="composer" class="composer">
+  <input
+    id="input"
+    type="text"
+    autocomplete="off"
+    placeholder="e.g. What's the weather in Goa?"
+    aria-label="Message TravelMate AI"
+  />
+  <button id="send" type="submit" aria-label="Send">
+    <span class="stamp">GO</span>
+  </button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
