@@ -1,45 +1,58 @@
-# DBMS Labs – SQL Constraints
+# DBMS Lab Programs
+
+This directory contains Oracle SQL programs completed as part of the DBMS laboratory course.
 
 ## Topics Covered
 
-* CREATE TABLE
-* PRIMARY KEY
-* Named Constraints
-* NOT NULL
-* UNIQUE
-* DEFAULT
-* CHECK
-* INSERT INTO
-* SELECT
+* Data Definition Language (DDL)
 
-## Tables Created
+  * CREATE TABLE
+  * ALTER TABLE
+  * DROP TABLE
+  * TRUNCATE TABLE
 
-1. Employee
-2. Department
-3. Students
+* Constraints
 
-## Oracle SQL Concepts Practiced
+  * PRIMARY KEY
+  * FOREIGN KEY
+  * UNIQUE
+  * NOT NULL
+  * CHECK
+  * DEFAULT
+  * Named Constraints
 
-* Creating tables
-* Applying column-level and named constraints
-* Inserting records
-* Using default values
-* Validating data using CHECK constraints
-* Defining PRIMARY KEY and UNIQUE constraints
-* Enforcing NOT NULL constraints
-* Creating multiple related tables for a database schema
+* Data Manipulation Language (DML)
 
-## Lab Progress
+  * INSERT
+  * UPDATE
+  * DELETE
 
-### Lab 01
+* Query Language (DQL)
 
-* Created the **Employee** table.
-* Practiced PRIMARY KEY, NOT NULL, UNIQUE, DEFAULT, and CHECK constraints.
-* Inserted and retrieved records using `INSERT` and `SELECT`.
+  * SELECT
 
-### Lab 02
+## Database Objects
 
-* Created the **Department** table with PRIMARY KEY and UNIQUE constraints.
-* Created the **Students** table using named constraints.
-* Practiced data validation using CHECK constraints.
-* Applied constraints to a simple multi-table database design.
+The SQL programs in this directory include examples of:
+
+* Employee
+* Department
+* Student
+* Faculty
+* Course
+* Enrollment
+* Event
+* Event Registration
+
+Additional database objects may be added as part of future lab exercises.
+
+## Learning Outcomes
+
+Through these lab programs, I practiced:
+
+* Creating relational database schemas
+* Applying integrity constraints
+* Defining relationships using foreign keys
+* Inserting and validating data
+* Maintaining referential integrity
+* Writing and executing Oracle SQL statements
