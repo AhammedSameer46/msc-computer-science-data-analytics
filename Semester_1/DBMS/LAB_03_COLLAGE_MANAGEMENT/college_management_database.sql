@@ -68,6 +68,19 @@ create table enroll
 	constraint fk_enroll_course foreign key(course_code) references course(course_code)
 );
 
+create table result
+(
+	result_id varchar2(10) primary key,
+	enroll_id varchar2(10),
+	internal_mks number(2,0) check(internal_mks between 0 and 50),
+	external_mks number(2,0) check(external_mks between 0 and 50),
+	total_mks number(3),
+   	grade char(1) check (grade in ('A', 'B', 'C', 'D', 'F')),
+    	result_status varchar2(4) check (result_status in ('PASS', 'FAIL')),
+    	constraint fk_result_enroll foreign key(enroll_id) references enroll(enroll_id)
+);
+
+
 create table event
 (
 	event_id varchar2(10) primary key,
@@ -97,112 +110,87 @@ insert into dept values('D03','Mathematics','ghi','Kakkanad',789456);
 insert into dept values('D04','Social Science','jkl','Kalamassery',1254632);
 insert into dept values('D05','Commerce','mno','Kalamassery',987456);
 
-/* STUDENT */
+insert into student values('S01','Kiran','20-jan-2000','M','123908','kiran@gmail','D03','10-june-2024','7');
+insert into student values('S02','Megha','25-feb-2001','F','67890','megha@gmail','D01','10-june-2024','9');
+insert into student values('S03','Mike','12-mar-2000','M','123909','mike@gmail','D05','11-june-2024','8');
+insert into student values('S04','Sophia','09-oct-2000','F','676091','sophia@gmail','D02','10-june-2024','9');
 
-insert into student values
-('S01','Ahammed',to_date('15-06-2005','DD-MM-YYYY'),'M','9876543210','ahammed@gmail.com','D02',to_date('01-08-2023','DD-MM-YYYY'),8.75);
+insert into faculty values('F01','Abin','PhD','Proffesor','06-july-2020','40000','abin@gmail','D02');
+insert into faculty values('F02','Mary','PG','Asst.Proffesor','10-july-2022','20000','mary@gmail','D03');
+insert into faculty values('F03','Aksa','PhD','lecturer','01-aug-2020','25000','aksa@gmail','D01');
 
-insert into student values
-('S02','Anjali',to_date('21-09-2004','DD-MM-YYYY'),'F','9876543211','anjali@gmail.com','D01',to_date('01-08-2023','DD-MM-YYYY'),9.10);
+insert into course values('C01','BCA','5','4','D02','F01');
+insert into course values('C02','BCom','3','5','D05','F03');
+insert into course values('C03','Maths','5','7','D03','F02');
 
-insert into student values
-('S03','Rahul',to_date('11-03-2005','DD-MM-YYYY'),'M','9876543212','rahul@gmail.com','D02',to_date('01-08-2023','DD-MM-YYYY'),8.40);
+insert into enroll values('E01','S02','C03','05-jun-2020','2020');
+insert into enroll values('E02','S04','C01','10-jun-2021','2021');
+insert into enroll values('E03','S01','C02','01-jun-2022','2022');
 
-insert into student values
-('S04','Neha',to_date('18-12-2004','DD-MM-YYYY'),'F','9876543213','neha@gmail.com','D03',to_date('01-08-2023','DD-MM-YYYY'),9.20);
+insert into result values('R01','E02','30','45','75','C','PASS');
+insert into result values('R02','E03','45','47','93','A','PASS');
+insert into result values('R03','E01','10','15','25','F','FAIL');
 
-insert into student values
-('S05','Arun',to_date('08-02-2005','DD-MM-YYYY'),'M','9876543214','arun@gmail.com','D05',to_date('01-08-2023','DD-MM-YYYY'),7.95);
-
-
-/* FACULTY */
-
-insert into faculty values
-('F01','Dr. Thomas','PhD','Professor',to_date('15-06-2015','DD-MM-YYYY'),85000,'thomas@gmail.com','D02');
-
-insert into faculty values
-('F02','Dr. Meera','PhD','Associate Professor',to_date('20-05-2016','DD-MM-YYYY'),78000,'meera@gmail.com','D01');
-
-insert into faculty values
-('F03','Dr. Rakesh','PhD','Assistant Professor',to_date('10-01-2018','DD-MM-YYYY'),65000,'rakesh@gmail.com','D03');
-
-insert into faculty values
-('F04','Dr. Joseph','MPhil','Assistant Professor',to_date('05-07-2019','DD-MM-YYYY'),60000,'joseph@gmail.com','D04');
-
-insert into faculty values
-('F05','Dr. Priya','PhD','Professor',to_date('01-02-2014','DD-MM-YYYY'),90000,'priya@gmail.com','D05');
-
-
-/* COURSE */
-
-insert into course values
-('C01','Database Systems',4,3,'D02','F01');
-
-insert into course values
-('C02','Operating Systems',4,4,'D02','F01');
-
-insert into course values
-('C03','English Literature',3,2,'D01','F02');
-
-insert into course values
-('C04','Linear Algebra',4,1,'D03','F03');
-
-insert into course values
-('C05','Financial Accounting',4,3,'D05','F05');
-
-
-/* ENROLL */
-
-insert into enroll values
-('E01','S01','C01',to_date('10-07-2024','DD-MM-YYYY'),'2024-2025');
-
-insert into enroll values
-('E02','S03','C02',to_date('10-07-2024','DD-MM-YYYY'),'2024-2025');
-
-insert into enroll values
-('E03','S02','C03',to_date('10-07-2024','DD-MM-YYYY'),'2024-2025');
-
-insert into enroll values
-('E04','S04','C04',to_date('10-07-2024','DD-MM-YYYY'),'2024-2025');
-
-insert into enroll values
-('E05','S05','C05',to_date('10-07-2024','DD-MM-YYYY'),'2024-2025');
-
-
-/* EVENT */
 
 insert into event values
-('EV01','Tech Fest',to_date('15-09-2024','DD-MM-YYYY'),'Auditorium','F01',100,200);
+('EV01','Tech Fest','15-aug-2024','Auditorium','F01',80,200);
 
 insert into event values
-('EV02','Literary Meet',to_date('20-09-2024','DD-MM-YYYY'),'Seminar Hall','F02',80,100);
+('EV02','Literary Meet','20-jan-2024','Seminar Hall','F02',70,100);
 
 insert into event values
-('EV03','Math Quiz',to_date('25-09-2024','DD-MM-YYYY'),'Lab 1','F03',50,50);
+('EV03','Math Quiz','25-feb-2024','Lab 1','F03',50,50);
 
 insert into event values
-('EV04','Social Expo',to_date('30-09-2024','DD-MM-YYYY'),'Conference Hall','F04',60,0);
+('EV04','Social Expo','11-oct-2024','Conference Hall','F01',60,50);
 
 insert into event values
-('EV05','Commerce Fair',to_date('05-10-2024','DD-MM-YYYY'),'Main Block','F05',75,150);
+('EV05','Commerce Fair','05-dec-2024','Main Block','F03',75,150);
 
 
-/* EVENT_REGN */
-
-insert into event_regn values
-('R01','EV01','S01',to_date('01-09-2024','DD-MM-YYYY'),'registered');
 
 insert into event_regn values
-('R02','EV02','S02',to_date('02-09-2024','DD-MM-YYYY'),'attended');
+('RE01','EV01','S01','01-feb-2024','registered');
 
 insert into event_regn values
-('R03','EV03','S04',to_date('03-09-2024','DD-MM-YYYY'),'registered');
+('RE02','EV02','S02','02-jan-2024','attended');
 
 insert into event_regn values
-('R04','EV04','S03',to_date('04-09-2024','DD-MM-YYYY'),'absent');
+('RE03','EV03','S04','03-jan-2024','registered');
 
 insert into event_regn values
-('R05','EV05','S05',to_date('05-09-2024','DD-MM-YYYY'),'attended');
+('RE04','EV04','S03','04-dec-2024','absent');
+
+insert into event_regn values
+('RE05','EV05','S03','05-mar-2024','attended');
+
+
+
+
+
+insert into dept values('D06','Computer Science','Dr. Anil Kumar','Carmel Block',8075791493);
+insert into dept values('D07','Science','Ahammed','A Block',8075791666);
+INSERT INTO dept
+(dept_id, dept_name, hod_name, office_location, contact_number)
+VALUES
+('D08', 'Physics', 'Ahad', 'P Block', '9074084738');
+insert into dept values('&dept_id','&dept_name','&hod_name','&office_location',&contact_number);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
