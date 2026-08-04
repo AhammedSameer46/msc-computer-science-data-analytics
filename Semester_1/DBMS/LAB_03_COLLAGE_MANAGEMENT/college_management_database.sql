@@ -176,24 +176,3 @@ VALUES
 ('D08', 'Physics', 'Ahad', 'P Block', '9074084738');
 insert into dept values('&dept_id','&dept_name','&hod_name','&office_location',&contact_number);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
