@@ -16,3 +16,8 @@ int main()
 	printf("Sum of elements:%d",b);
 	return 0;
 }
+ 
+
+for i in range(1, 6):
+	print(f"Semester {i}: Data Structures - Arrays - Array Sum Program")
+	
