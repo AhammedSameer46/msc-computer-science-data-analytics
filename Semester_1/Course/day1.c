@@ -1,4 +1,4 @@
-#include<stdio.h>
+/////#include<stdio.h>
 int main()
 {
     int a[],i;
@@ -13,4 +13,12 @@ int main()
         printf("%d ",a[i]);
     }
     return 0;
-}
+}/////
+
+//// struct
+
+
+#include<stdio.h>
+void main()
+
+struct 
