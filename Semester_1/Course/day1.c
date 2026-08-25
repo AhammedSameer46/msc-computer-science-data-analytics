@@ -21,4 +21,17 @@ int main()
 #include<stdio.h>
 void main()
 
-struct 
+#include<stdio.h>
+ struct reactangle ;
+{
+   int length;
+   int breadth;
+   char x;
+   
+}
+int main()
+{
+    struct reactangle r1=(10,15);
+    printf("%d",sizeof(r1.length));
+    return 0;
+}
