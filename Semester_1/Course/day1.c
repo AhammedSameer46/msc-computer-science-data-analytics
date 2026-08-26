@@ -32,8 +32,6 @@ void main()
 int main()
 {
     struct reactangle r1=(10,15);
-    r1.length=20;
-    r1.breadth=30
     printf("%d",sizeof(r1.length));
     return 0;
 }
