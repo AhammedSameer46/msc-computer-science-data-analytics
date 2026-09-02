@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHAMMED | Full Stack Developer</title>
+    <meta name="description" content="Premium developer portfolio. I build digital systems where engineering meets intelligent design.">
+    
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor">
+        <div class="cursor-text" id="cursor-text">VIEW</div>
+    </div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-left">
+            <span class="status-dot"></span>
+            <span class="nav-meta">AVAILABLE FOR NEW PROJECTS</span>
+        </div>
+        <div class="nav-center desktop-only">
+            <a href="#work" data-hover>WORK</a>
+            <a href="#services" data-hover>SERVICES</a>
+            <a href="#experience" data-hover>EXPERIENCE</a>
+            <a href="#contact" data-hover>CONTACT</a>
+        </div>
+        <div class="nav-right">
+            <a href="#contact" class="nav-cta" data-hover>LET'S TALK ↗</a>
+        </div>
+    </nav>
+
+    <main class="smooth-scroll-wrapper">
+        
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-top">
+                <h1 class="hero-title load-anim">AHAMMED</h1>
+                <h2 class="hero-subtitle load-anim">FULL STACK DEVELOPER</h2>
+            </div>
+            
+            <div class="hero-middle">
+                <div class="hero-image-wrapper load-anim">
+                    <!-- Placeholder setup. Replace src with your actual profile.jpg -->
+                    <img src="assets/profile.jpg" alt="Ahammed Portrait" class="hero-img" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'800\' background=\'%23e0e0e0\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23e0e0e0\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'20\' fill=\'%23888\'%3Eassets/profile.jpg%3C/text%3E%3C/svg%3E'">
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <div class="hero-statement load-anim">
+                    <p>I BUILD DIGITAL SYSTEMS</p>
+                    <p>WHERE ENGINEERING MEETS</p>
+                    <p>INTELLIGENT DESIGN.</p>
+                </div>
+                <div class="hero-socials load-anim">
+                    <a href="#" data-hover>GITHUB</a>
+                    <a href="#" data-hover>LINKEDIN</a>
+                    <a href="#" data-hover>INSTAGRAM</a>
+                    <a href="#" data-hover>EMAIL</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Editorial Statement -->
+        <section class="editorial" id="statement">
+            <h2 class="editorial-text">
+                <div class="line"><span class="word">I DON'T JUST BUILD</span></div>
+                <div class="line"><span class="word">APPLICATIONS.</span></div>
+                <br>
+                <div class="line"><span class="word">I ENGINEER</span></div>
+                <div class="line"><span class="word">DIGITAL SYSTEMS.</span></div>
+                <br>
+                <div class="line"><span class="word">WHERE HIGH-PERFORMANCE</span></div>
+                <div class="line"><span class="word">LOGIC MEETS</span></div>
+                <div class="line"><span class="word">ELEGANT INTERFACES.</span></div>
+            </h2>
+        </section>
+
+        <!-- Work Section (Rendered via JS) -->
+        <section class="work" id="work">
+            <div class="section-header">
+                <p class="meta">SELECTED WORKS</p>
+            </div>
+            <div id="work-container">
+                <!-- JS dynamically injects projects here -->
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="section-header">
+                <p class="meta">SERVICES</p>
+            </div>
+            <div class="services-list">
+                <div class="service-item" data-hover>
+                    <div class="service-head">
+                        <span class="meta">01</span>
+                        <h3>FULL-STACK DEVELOPMENT</h3>
+                    </div>
+                    <div class="service-body">
+                        <p>Scalable web applications, APIs, databases, and highly available production systems engineered for modern demands.</p>
+                    </div>
+                </div>
+                <div class="service-item" data-hover>
+                    <div class="service-head">
+                        <span class="meta">02</span>
+                        <h3>MACHINE LEARNING</h3>
+                    </div>
+                    <div class="service-body">
+                        <p>End-to-end predictive modeling, customer segmentation, and data intelligence pipelines integration.</p>
+                    </div>
+                </div>
+                <div class="service-item" data-hover>
+                    <div class="service-head">
+                        <span class="meta">03</span>
+                        <h3>AI ENGINEERING</h3>
+                    </div>
+                    <div class="service-body">
+                        <p>Integrating large language models, custom RAG architectures, and AI-driven workflows into enterprise products.</p>
+                    </div>
+                </div>
+                <div class="service-item" data-hover>
+                    <div class="service-head">
+                        <span class="meta">04</span>
+                        <h3>CLOUD & INFRASTRUCTURE</h3>
+                    </div>
+                    <div class="service-body">
+                        <p>Designing robust, automated, and secure AWS/Docker infrastructure for high-scale environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Stack Section -->
+        <section class="experience" id="experience">
+            <div class="experience-grid">
+                <div class="stack-col">
+                    <p class="meta">LANGUAGES</p>
+                    <ul class="editorial-list">
+                        <li>PYTHON</li>
+                        <li>JAVASCRIPT</li>
+                        <li>HTML / CSS</li>
+                        <li>JAVA</li>
+                    </ul>
+                </div>
+                <div class="stack-col">
+                    <p class="meta">FRAMEWORKS</p>
+                    <ul class="editorial-list">
+                        <li>REACT</li>
+                        <li>NODE.JS</li>
+                        <li>NEXT.JS</li>
+                    </ul>
+                </div>
+                <div class="stack-col">
+                    <p class="meta">DATA & AI</p>
+                    <ul class="editorial-list">
+                        <li>PANDAS</li>
+                        <li>SCIKIT-LEARN</li>
+                        <li>MACHINE LEARNING</li>
+                        <li>MYSQL / POSTGRESQL</li>
+                        <li>REDIS</li>
+                    </ul>
+                </div>
+                <div class="stack-col">
+                    <p class="meta">INFRASTRUCTURE</p>
+                    <ul class="editorial-list">
+                        <li>GIT / GITHUB</li>
+                        <li>DOCKER</li>
+                        <li>AWS</li>
+                        <li>CLOUD INFRASTRUCTURE</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Systems Thinking Section -->
+        <section class="systems" id="systems">
+            <h2 class="massive-text">I THINK IN SYSTEMS.</h2>
+            <div class="system-flow">
+                <span class="flow-item">DATA</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-item">PROCESSING</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-item">INTELLIGENCE</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-item">API</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-item">APPLICATION</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-item">USER</span>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats" id="stats">
+            <div class="stat-item">
+                <h3 class="stat-number" data-target="4">0</h3>
+                <p class="meta">SELECTED PROJECTS</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number" data-target="150" data-suffix="K+">0</h3>
+                <p class="meta">LINES OF PRODUCTION CODE</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number" data-target="18">0</h3>
+                <p class="meta">TECHNOLOGIES MASTERED</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number" data-target="95" data-suffix="%">0</h3>
+                <p class="meta">AUTOMATED WORKFLOWS</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="contact-wrap">
+                <h2 class="contact-title">LET'S BUILD<br>SOMETHING<br>EXCEPTIONAL.</h2>
+                <div class="contact-action">
+                    <p class="meta">HAVE A PROJECT IN MIND?</p>
+                    <a href="mailto:ahammed@example.com" class="giant-link" data-hover>LET'S TALK ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-left">
+                <p>AHAMMED</p>
+                <p class="meta">FULL STACK DEVELOPER</p>
+                <p class="meta">THRISSUR / KERALA</p>
+            </div>
+            <div class="footer-center">
+                <a href="#" data-hover>GITHUB</a>
+                <a href="#" data-hover>LINKEDIN</a>
+                <a href="#" data-hover>INSTAGRAM</a>
+            </div>
+            <div class="footer-right">
+                <p class="meta">© 2026 AHAMMED</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
