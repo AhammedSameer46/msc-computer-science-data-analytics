@@ -9,3 +9,17 @@ int main()
     printf("The addres of pointer is %d",*p);
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+will update it latter
